@@ -2,9 +2,22 @@
 <html lang="ru">
     <head>
         <title> My Site </title>
+        <style>
+            td, th {
+                border: solid 1px black;
+            }
+            
+            table {
+                border-collapse: collapse;
+                border: solid 1px black;
+
+            }
+        </style>
     </head>
     <body>
         <h1>My first site</h1>
+        <a href="#table-1">
+            <img src="img/1.jfif" alt="Picture of nature" width="400px" height="150px"/><br></a>
         <b>Жирный текст</b>
         <p>
         <del>Зачеркнутый текст</del>
@@ -22,18 +35,9 @@
             <li>Third</li>
             <li>Fourth</li>
         </ol>
-        <!-- <h2>Ненумерованный список</h2> -->
+        <h2>Ненумерованный список</h2>
         <!-- Comments -->
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            
-        </body>
-        </html>
+        
         <details>
             <summary>Numbers</summary>
             <ul style="list-style-type: square; color: blue;">
@@ -43,6 +47,50 @@
                 <li>Fourth</li>
             </ul>
         </details>
+        <p>F <sub>i</sub>=D<sup>3</sup>+K<sup>4</sup></p>
+        
+        <table id="table-1" class="table-1">
+            <thead>Table #1
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone number</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Michail</td>
+                    <td>Ivanov</td>
+                    <td>+78121111111</td>
+                    
+                </tr>
+
+
+                <tr>
+                    <td>Petr</td>
+                    <td>Michailov</td>
+                    <td>+9555889631</td>
+                </tr>
+
+
+                <tr>
+                    <td>Ivan</td>
+                    <td>Petrov</td>
+                    <td>+9556393135</td>
+                </tr>
+
+
+                <tr>
+                    <td>Semion</td>
+                    <td>Livanov</td>
+                    <td>+5233694548</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+        
+        
     </body>
 
 </html>

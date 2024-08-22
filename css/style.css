@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main-title{
+    color: blue;
+}
+#cont-1{
+
+}
+
+.container{
+
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.main-img{
+
+}
+.main-text{
+    font-size: 10px;
+    color: black;
+}
+
+.container p{ /* C символом > будет действовать на тэг p, что непосредственно близко к контейнеру. 
+                Без > действует на все p*/
+    color: red;
+}
+
+
+h1,h2,h3{
+    color: red;
+}

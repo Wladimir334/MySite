@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.con-1{
+    padding: 0;
+    margin: 0;
+}
+
+.MainTit1 {
+    width: 33%;
+    background-color: aquamarine;
+    padding: 5px; 
+    float: left;
+
+
+
+}
+
+.MainTit2 {
+    width: 33%;
+    background-color: rgb(51, 65, 216);
+    padding: 5px; 
+    float: left;
+    
+
+
+}
+
+.MainTit3 {
+    width: 30%;
+    background-color: rgb(230, 233, 35);
+    padding: 5px; 
+    float: left;
+    
+}
+
+.img1{
+    width: 100%
+
+}
+
+.img2{
+    width: 100%
+
+}
+
+.img3{
+    width: 100%
+
+}
+
+.footer{
+background-color: rgb(51, 21, 218);
+                color: rgb(228, 154, 64);
+                text-align: center;
+                position: fixed  ;
+                bottom: 0px;
+                width: 100%;
+}

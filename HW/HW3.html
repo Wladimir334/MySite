@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            HW3.html
+        </title>
+        <style> 
+            td, th {
+                border: 2px solid;
+        }
+
+        </style>
+        
+    </head>
+    <body>
+        <table id="table-1", class="table_with_text_on_center">
+            <thead><h3>Таблица погоды</h3>
+                <tr style="color: blueviolet;">
+                    <th style="background-color: aquamarine;">Город</th>
+                    <th style="font-size: larger;">Температура, C</th>
+                    <th style="box-sizing: inherit;">Влажность, %</th>
+                    <th style="margin: 13;">Скорость ветра, м/с</th>
+                </tr>
+            
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p align="center">Санкт-Петербург</p></td>
+                    <td><p align="center">25</p></td>
+                    <td><p align="center">89</p></td>
+                    <td><p align="center">3</p></td>
+                    
+
+                </tr>
+                <tr>
+                    <td><p align="center">Псков</p></td>
+                    <td><p align="center">23</p></td>
+                    <td><p align="center">60</p></td>
+                    <td><p align="center">5</p></td>
+                    
+
+                </tr>
+                <tr>
+                    <td><p align="center">Москва</p></td>
+                    <td><p align="center">30</p></td>
+                    <td><p align="center">45</p></td>
+                    <td><p align="center">8</p></td>
+                    
+
+                </tr>
+                <tr>
+                    <td><p align="center">Новгород</p></td>
+                    <td><p align="center">19</p></td>
+                    <td><p align="center">32</p></td>
+                    <td><p align="center">17</p></td>
+                    
+
+                </tr>
+                <tr>
+                    <td><p align="center">Архангельск</p></td>
+                    <td><p align="center">15</p></td>
+                    <td><p align="center">74</p></td>
+                    <td><p align="center">20</p></td>
+                    
+
+                </tr>
+
+
+
+            </tbody>
+
+
+
+
+
+        </table>
+
+        <form action="#" method="post">
+            <p>
+                <label for="login"><i>Ваш пол:</i></label>
+                <input id="login", name="login", type="text", placeholder="М или Ж">
+
+            </p>
+
+            <p>
+                <label for="age", style="color: chartreuse;">Ваш возраст:</label>
+                <input name="age", type="number", min="18", max="30", step="1">
+
+            </p>
+
+            <p>
+                <label for="phone", style="background-color: rgb(223, 241, 25);">Номер телефона:</label>
+                <input name="phone", type="text", value="+78592213658">
+
+            </p>
+
+            <p>
+                <label for="range", style="border: 3px;">Двигай</label>
+                <input name="range", type="range" min="1" max="1000" step="10">
+
+            </p>
+
+            <p>
+                <label for="login", style="background-color: rgb(241, 25, 25);">Опишите Ваше текущее состояние:</label>
+                <input name="login", type="text" min="20" max="1000">
+
+            </p>
+            
+            <p><br>Регион:
+                <select name="list">
+                <option selected>St.Peterburg</option>
+                <option >Moscow</option>
+                <option >Amsterdam</option>
+                <option >London</option>
+                </select>
+
+                
+                
+
+            </p>
+            <p>Ваш IQ:</p>
+                <input type="radio" name="radio" value="1">до 40 </p>
+                <input type="radio" name="radio" value="2">от 40 до 80</p>
+                <input type="radio" name="radio" value="3"checked>от 80 до 150</p>
+
+            </p>
+
+            <p><U>Что вас беспокоит:</U>
+                <textarea name="resume", rows="5", cols="20", aria-valuetext=""> 
+                </textarea>
+            </p>
+
+            <p><b>Кто ты по жизни:</b></p>
+
+                <label for="chbox">Лох:</label>
+                <input name="chbox" type="checkbox"/></p>
+                <label for="chbox">Правильный пацан:</label>
+                <input name="chbox" type="checkbox" checked/>
+            </p>
+
+            
+            <br><input type="submit" value="Отправить">
+            <input type="submit" value="Сбросить">
+
+
+        </form>
+        
+
+
+
+    </body>
+
+
+</html>

@@ -59,3 +59,25 @@ background-color: rgb(51, 21, 218);
                 bottom: 0px;
                 width: 100%;
 }
+
+nav{
+    border-bottom: 1px;
+}
+
+.crumbs ol{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb{
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #f40e0e;
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+  }

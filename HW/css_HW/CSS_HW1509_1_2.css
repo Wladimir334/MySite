@@ -1,0 +1,30 @@
+            
+div#nav-logo div a{
+    font-size:15px;
+    color:rgb(29, 4, 88);
+}
+ 
+div#nav-menu{
+    float:right;
+}
+ 
+#nav-menu ul{
+    margin:0;
+    padding:0;
+    list-style: none;   
+}
+ 
+#nav-menu ul li{
+    float: left;
+}
+ 
+#nav-menu ul li a{
+    font-family:'Times New Roman';
+    font-size:13px;
+    color:#bfbfbf;
+    padding:0 20px;
+    padding-top: 4px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}¨

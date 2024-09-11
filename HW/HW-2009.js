@@ -59,3 +59,11 @@ alert('Число наоборот: ' + y);
 */
 
 
+function check(num) {
+    return  parseInt(num)&1 ?  "нечётное" : "чётное" ;
+  }
+  const n = prompt("Введите целое число.");
+  alert(check(n));
+
+
+

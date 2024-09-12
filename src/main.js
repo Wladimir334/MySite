@@ -81,6 +81,7 @@ let res = last + input.slice(0, 4); //диапазон интекса от 0 д�
 alert("Ваше число: " + res)
 */
 
+/*
 let x, y;
 x = prompt("Введите число:"); // let x = Number(prompt("Введите число:")) - короткая запись
 y = prompt("Введите число:");
@@ -94,3 +95,71 @@ alert("Сложение: " + res);
 alert("Умножение: " + res1);
 alert("Деление: " + res2);
 alert("Вычитание: " + res3);
+*/
+
+/*
+window.onload = function() {
+    function foo() {
+        let x, a;
+        const k = 4;
+        x = Number(prompt("Введите число X:"));
+        a = Number(prompt("Введите число A:"));
+        y = k * x + a * x **2;
+        alert("Result: " + y);
+    }   
+    foo()
+}
+*/
+
+function calc(a, b, operation){
+    if (operation == '+'){
+        return a + b; 
+    }
+    else if (operation == '-'){
+        return a - b;
+    }
+    else if (operation == '*'){
+        return a * b;
+    }
+    else if (operation == '/'){
+        
+        if (b == 0){
+            return 'На ноль делить нельзя!';
+        } else {
+            return a / b;
+        }
+    }
+    else{
+        return "Неизвестная операция";
+    }
+    
+}
+/*
+window.onload = () => {
+    let x = Number(prompt("Введите первое число: "));
+    let y = Number(prompt("Введите второе число: "));
+    let op = prompt("Введите операцию (+,-,/,*): ");
+    let res = calc(x, y, op);
+    alert("Результат операции: " + res);
+
+}
+*/
+
+function calcPaS(){
+    let x = Number(document.getElementById("num1").value);
+    let y = Number(document.getElementById("num2").value);
+    let op = document.getElementById("operation").value;
+    let res = calc(x, y, op);
+    alert("Результат: " + res);
+
+}
+
+window.onload = () => {
+    let buttonCalc = document.getElementById("calculator");
+    buttonCalc.addEventListener('click', calcPaS);
+
+
+}
+
+
+

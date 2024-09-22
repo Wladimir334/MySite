@@ -68,5 +68,3 @@ $(document).ready(function () {
     })
 });
     
-    //$("#callAjax").click(function () {
-      // $("#ajaxContent").load("../src/text.txt")   });

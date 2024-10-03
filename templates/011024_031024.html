@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>mypage</title>
+    <script src="../src/Jquery.js" type="text/javascript"></script>
+    <script src="../src/011024_031024.js" type="text/javascript"></script>  
+  </head>
+  <body>
+    
+    
+  </body>
+<script>
+
+    
+
+    //alert("Hello");
+    //let name = "24";
+    //let age = 24;
+    //if (age >= 18){
+    //    result = "ok";
+    //}
+    //else {
+    //    result = "error"
+    //};
+    
+    //console.log(result);
+
+//let radiobtn = 1;
+//if (radiobtn == 1){
+ //   console.log(1)
+//};
+//    else if(radiobtn == 2){
+//    console.log(2)
+//};
+//    else (radiobtn == 3){
+//    console.log(3)
+//};
+
+
+//const myArray = [];
+//const people = [
+//    ['Tanya',25 ,false],
+//    ['Ivan', 23, true],
+//    ['Elena', 24, false],
+//]
+//console.log(people[1][2]);
+
+
+
+//console.log(people[1]);
+///let igor = people[2];
+//people[10] = "Sergey";
+//console.log(igor);
+
+
+//   Стили нужно использовать одинаковые во всём коде. 3 вида:
+
+//    1.PascalCase
+ //       LastName
+  //      MyCar
+ //       MyList
+//
+  //  2. camelCase
+  //      lastName
+   //     myCar
+  //      myList
+
+    //3. snake_case
+    //    last_name
+  //      my_list
+//
+
+function hello(name){
+  console.log(`Hello, ${name}`) // Должны быть обратные кавычки! они делают форматированные строки и позволяют вставлять объекты
+};
+
+hello("Ivan");
+
+
+
+
+
+function sumNumber(a,b){
+  console.log(`${a} + ${b} = ${a+b}`)
+};
+
+sumNumber(7,9);
+
+
+
+function info(name, age, city){
+  console.log(`Hi, my name is ${name}. I am ${age} years old. I'm from ${city}`)
+};
+
+info("Ivan", 17, "Moscow");
+
+
+
+const message = function(msg){
+  console.log(msg)
+}
+
+message("Function whithout name.")
+
+
+function print(){
+  console.log("Outer function");
+  printHello();
+  printHello();
+printHello
+  function printHello(){
+    console.log("Inner function")
+  }
+}
+print()
+
+/*
+function printPerson(person){
+  console.log("Name:", person [0]);
+  console.log("Age:", person [1]);
+  console.log("Email:", person [2]);
+}
+const Ivan = ["Ivan", 29, "ivan@gmail.com"]
+printPerson(Ivan)
+*/
+
+
+function printPersonSpread(name, age, email){
+  console.log("Name:", name);
+  console.log("Age:", age);
+  console.log("Email:", email);
+}
+const Ivan = ["Ivan", 29, "ivan@gmail.com"]
+
+printPersonSpread(...Ivan)
+
+
+
+
+
+function someAnyElements(){
+  let result = 0;
+  for (const n of arguments){
+    result += n;
+  }
+  console.log(result)
+}
+someAnyElements(5)
+someAnyElements(5,4)
+someAnyElements(5,4,1)
+someAnyElements(5,4,3,4)
+
+
+//  или написать с ограниченным количеством (а,b):
+
+
+function someAnyElement(a,b){
+  
+  console.log(`a = ${a}`)
+  console.log(`b = ${b}`)
+
+  let result = 0;
+  for (const n of arguments){
+    result += n;
+  }
+  console.log("Сумма чисел: ", result);
+}
+someAnyElements(5)
+someAnyElements(5,4)
+someAnyElements(5,4,1)
+someAnyElements(5,4,3,4)
+
+
+
+function getName(name){
+  const newName = `${name}!`
+  return newName
+}
+let newName = getName("Rikky")
+console.log(newName)
+
+
+
+function getSum(a,b){
+  const result = a+b
+  return result 
+}
+let num = getSum(3,4)
+console.log(num)
+
+
+
+
+
+
+
+function getSubstruct(a,b){
+  const result = a - b;
+  return result
+}
+
+
+function operation(a,b,func){
+  const result = func(a,b)
+  return result
+}
+
+console.log("Сумма чисел: ")
+let res1 = operation(3,4, getSum);
+console.log(res1)
+
+console.log("Разность чисел: ")
+let res2 = operation(3,4, getSubstruct);
+console.log(res2)
+
+
+
+
+function hello(){
+  console.log("Hello") 
+};
+hello()
+
+
+const hi = () => console.log("Hi")   // это стрелочная функция
+hi()
+
+
+
+const ho = (msg) => console.log(msg)   
+ho("Message")
+
+
+const newSum = (a,b) => console.log(a+b)  
+newSum(3,6)
+
+
+const newSu = (a,b) => a + b  
+result = newSu(5,5)
+console.log(result)
+
+
+const sqeare = n => {
+  const result = n*n
+  return result
+}
+
+
+</script>
+
+</html>

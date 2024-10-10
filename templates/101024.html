@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>mypage</title>
+    </head>
+  <body>
+    
+    
+  </body>
+<script>
+   
+  
+   const user = {}
+    user.name = "Misha";
+    user.age = 22;
+    
+    console.log(user);
+    console.log(user.name);
+    console.log(user.age);
+    console.log(user.phone);
+    
+    const car = {
+        brand: "Lada",
+        model: "2115"
+    };
+
+    const breed = "Mops";
+    const color = "Red";
+    const dog = {breed, color};
+    console.log(dog);
+    
+    const power = 230;
+    const capacity = 2.5;
+    const engine = {power, capacity}
+
+    console.log(engine);
+
+    const carLada = {
+        brand: "Lada",
+        model: "Aura",
+        engine,
+        toGo: function(){
+            console.log(`${this.brand} ${this.model} GO!`)
+        }
+    }
+    console.log(carLada);
+    carLada.toGo()
+
+        const cat = {}
+        cat ["color"] = "Белая"
+        cat ["breed"] = "Сиамская"
+        cat ["may"] = function(){
+            console.log("Мяуу")
+        }
+
+        console.log(cat)
+
+
+    const home = {
+        "height wall": 3,    //если есть пробел, то нужны кавычки. Лучше использовать camelCase
+        areaKitchen: 22
+    }
+    console.log (home["height wall"])
+
+
+    delete home["height wall"]
+    delete home.areaKitchen
+
+    const carInfo = [
+        ["brand", 'Audi'],
+        ["model", "A6"],
+        ["color", "black"]
+    ]
+    const carInfoObject = Object.fromEntries(carInfo);
+    console.log (carInfo)
+    console.log (carInfoObject.brand)
+
+    console.log(this)
+    
+
+
+    function testFunc() {
+        let name = "Misha";
+        console.log(this.name);
+    }
+    
+    let name = "Alex";
+    testFunc();
+
+    const user2 = {
+        name2: "Misha",
+        display: function(){
+            console.log(this.name)
+        }
+    }
+    let name2 = "Alex";
+    user2.display();
+
+    function outerFunc(){
+        let age = 100;
+        console.log(this.age)
+    }
+    const manFirst = {
+        age: 50,
+        display: outerFunc
+    }
+
+    const manSecond = {
+        age: 25,
+        display: outerFunc
+    }
+
+    var age = 10; 
+    // window.age = 10;
+
+
+    outerFunc();
+    manFirst.display();
+    manSecond.display();
+
+    const user3 = {
+        name3: "Misha",
+        say: ()=> console.log(`My name is ${this.name3}`)
+    }
+    var name3 = "Alex";
+    user3.say()
+
+
+    const user4 = {
+        name4: "Misha",
+        hello(){
+            console.log("Hello")
+            let say = ()=> console.log(`My name is ${this.name4}`)
+            say()
+        }
+    }
+    user4.hello()
+
+
+    const country = {
+        name: "Россия",
+        janguage: "Русский",
+        capital: {
+            name: "Москва",
+            population: 13000000,
+            year: 877
+
+        }
+    }
+    console.log(`Столица - ${country.capital.name}`)
+    console.log(`Население - ${country["capital"]["population"]}`)
+    console.log(`Год - ${country.capital["year"]}`)
+
+
+
+
+
+
+</script>
+
+</html>

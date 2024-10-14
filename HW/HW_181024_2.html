@@ -75,6 +75,17 @@
           console.log("Фрукт: " + a + "  " + "Количество: " + fruits[a])
         };
 
+
+      
+        let obj1 = { a: 1, b: 2 }; 
+        let obj2 = { b: 3, c: 4 };
+
+        
+        let Summ = Object.assign(obj1, obj2);
+        for (var key of Object.keys(Summ)){
+          console.log(key + "=" + obj1[key])
+        }
+
         
     
       

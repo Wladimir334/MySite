@@ -79,15 +79,91 @@
       
         let obj1 = { a: 1, b: 2 }; 
         let obj2 = { b: 3, c: 4 };
+     
+        function summ(...objs) {
+          return objs.reduce((d, e) => {
+          for (let k in e) {
+          if (e.hasOwnProperty(k))
+            d[k] = (d[k] || 0) + e[k];
+            }
+            return d;
+            }, {});
+          }
 
+          console.log(summ(obj1, obj2));
+
+
+
+        let original = { a: 1, b: 2, c: 3 };
+        let copy = {}; 
+        console.log(original)
+
+        Object.assign(copy, original);
+        Object.defineProperty(copy, "b", {value: 5});
+        console.log(copy);
         
-        let Summ = Object.assign(obj1, obj2);
-        for (var key of Object.keys(Summ)){
-          console.log(key + "=" + obj1[key])
+
+        const position = {}
+        position.id = 6512;
+        position.name = "Book";
+        position.price = 20;
+        position.place = "F45";
+
+        let countPosition = Object.keys(position).length;
+        console.log(countPosition);
+
+
+
+        let user = {};
+        console.log(user);
+
+        const name = {
+          name: "John"
         }
+        let user1 = Object.assign(user, name);
+        console.log(user1);
 
-        
-    
+        const surname = {
+          surname: "Smith"
+        };
+        let user2 = Object.assign(user1, surname);
+        console.log(user2);
+
+        let user3 = Object.defineProperty(user2, "name", {value: "Pete"});
+        console.log(user3);
+
+        let user4 = delete user3.name;
+        console.log(user3);
+
+
+
+
+        let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130
+        };
+        // function calcSalaries (salaries){
+        //   for ()
+
+        // }
+        function calculateTotalSalary(salaries) {
+          let totalSalary = 0;
+          for (let key in salaries) {
+          totalSalary += salaries[key];
+          }
+          return(totalSalary);
+        }
+        calculateTotalSalary(salaries);
+          console.log(calculateTotalSalary);
+
+
+
+
+
+
+
+
       
 
 

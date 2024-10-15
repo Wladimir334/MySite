@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>151024_DOM</title>
+    
+  </head>
+  <body>
+    <h2>Текстовое поле</h2>
+    <input type="text" name="textInputField" id="textInput">
+    <button onclick="displayText()" id="btnText">Показать текст</button>
+    <p id="textDisplay">Текст будет отображаться здесь</p>
+    
+
+
+    <h2>2. Чекбоксы</h2>
+    <input type="checkbox" id="checkbox1">
+    <label for="checkbox1">Чекбокс 1</label>
+
+    <input type="checkbox" id="checkbox2">
+    <label for="checkbox2">Чекбокс 2</label>
+
+    <button ondblclick="showCheckboxes()">Показать сocтояние чекбоксов</button>
+
+
+
+    <h3>3. Радиокнопки</h3>
+    <input type="radio" name="radioGroup" id="radio1" value="Option 1">
+    <label for="radio1">Опция №1</label>
+
+    <input type="radio" name="radioGroup" id="radio2" value="Option 2">
+    <label for="radio2">Опция №2</label>
+
+    <button onclick="showRadio()">Показать выбранную опцию</button>
+
+
+
+    <h2>4. Одиночный выбор</h2>
+    <select id="dropdown">
+        <option value="option1">Опция 1</option>
+        <option value="option2">Опция 2</option>
+        <option value="option3">Опция 3</option>
+        <option value="option4">Опция 4</option>
+
+    </select>
+    <button onclick="showSelected()">Показать выбранную функцию</button>
+
+    
+  </body>
+    <script>
+
+        function displayText() {
+            const inputValue = document.getElementById('textInput').value //или так:  const inputValue = document.querySelector('textInput').value
+            document.querySelector('#textDisplay').innerText = inputValue;
+        };
+        function showCheckboxes() {
+            const checkbox1 = document.querySelector('#checkbox1').checked;
+            const checkbox2 = document.querySelector('#checkbox2').checked;
+            alert(`Чекбокс 1: ${checkbox1}\n Чекбокс 2: ${checkbox2}`)
+        };
+
+        function showRadio() {
+            const selectedRadio = document.querySelector('input[name="radioGroup"]:cheked');
+            if (selectedRadio) {
+                alert(`Выбрана ${selectedRadio.value}`) 
+            
+                  } else {
+                    alert('Ничего не выбрано')
+                }
+
+        }
+
+        function showSelected(){
+            const dropDown = document.querySelector('#dropdown')
+            alert(`Выбрана опция ${dropDown.value}`)
+        }
+
+
+
+        //   Методы для поиска и управления элементами на веб-странице:
+        // 1) getElementById(value) - поиск элементов по id
+        // 2) getElementsByTagName(value)- поиск элементов по Тегу
+        // 3) getElementsByClassName(value)- поиск элементов по имени класса
+        // 4) getElementsByName(value)- поиск элементов по имени 
+        // 5) querySelector(value) - первый элемент, соответствующий css-селектору value
+        // 6) querySelectorAll(value) - все элементы, соответствующие css-селектору value
+
+        //   Селекторы CSS
+        // 1) * - выбирает все элементы
+        // 2) E - выбирает все элементы типа Е
+        // 3) [a] - выбирает все элементы c атрибутом а
+        // 4) [a="b"] - выбирает все элементы, в которых атрибут а имеет значение b
+        // 5) [a~="b"] - выбирает все элементы, в которых атрибут a имеет нестолько значекний и одно из них b
+        // 6) :nth-child(n) - выбирает n-вложенного элемента ( отсчёт идет с начала)
+        // 7) :nth-last-child(n) - выбирает n-вложенного элемента ( отсчёт идет с конца)
+        // 8) :first-child - первый вложенный элемент
+        // 9) :last-child - последний вложенный элемент
+        // 10) #id - находит элемент по id
+        // 11) .class - элементы класса class
+        // 12) E F - все элементы F, которые встречаются в Е
+        // 13) E > F - все элементы F непосредственно (дети) вложенные в Е
+        // 14) .previousSibling - соседние
+        // 15) .nextSibling
+        // 14) .previousSibling - соседние
+        // 15) ...Parants
+
+        // Основные свойства элементов:
+
+        // 1) innerText - текстовое содержимое элементы (textContent)
+        // 2) tagName - тэг элемента
+        // 3) innerHTML - HTML-code 
+
+
+
+
+
+
+
+
+    </script>
+</html>

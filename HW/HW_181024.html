@@ -41,9 +41,46 @@
 
 
 
-        let a = prompt();
 
-        function 
+        const countVowels = str => Array.from(str)
+          .filter(letter => 'aeiouy'.includes(letter)).length;
+
+          console.log(countVowels('The cow fly in the sky')); 
+          console.log(countVowels('Water are boiling')); 
+
+
+
+          function checkSpam(a) {
+          const spamWords = ["скидка", "бесплатно", "акция"];
+          a = a.toLowerCase();
+            for (let i = 0; i < spamWords.length; i++) {
+              if (a.includes(spamWords[i])) {
+                return true;
+                 }
+              }
+              return false;
+          }
+              console.log(checkSpam("У нас Акция и всё Бесплатно"));
+
+
+
+
+              const truncate = (s, n) => s.length > n ? s.slice(0, n) + '…' : s;
+
+              console.log(truncate("Hello, world ",7));
+
+
+
+
+
+              const palindrome = (str) => word = str.split('').reverse().join('');
+                  return str === word;
+              
+                console.log(palindrome("казак")); 
+                console.log(palindrome("мороз")); 
+
+
+
 
         
 

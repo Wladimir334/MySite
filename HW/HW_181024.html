@@ -72,16 +72,6 @@
 
 
 
-
-              // const palindrome = (str) => word = str.split('').reverse().join('');
-              //     return str === word;
-              
-              //   console.log(palindrome("казак")); 
-              //   console.log(palindrome("мороз")); 
-
-
-
-
                 function countWords (str1) {
                 const arr = str1.split(" ");
                 return arr.filter(word => word != " ").length;
@@ -120,7 +110,23 @@
 
 
 
-                
+                function findIndex(str, symbol) {
+                  let indexes = [];
+                  let count = 0;
+
+
+                  for (let i = 0; i < str.length; i++) {
+                      if (str[i] === symbol) {
+                          indexes.push(i);
+                          count++;
+                      }
+                  }
+
+                  console.log("Индекс '" + symbol + "' в строке: " + indexes.join(", "));
+                  console.log("Встречается: " + count + " раз(а)");
+                  }
+
+                  findIndex("hello world", "l");
 
 
 
@@ -128,15 +134,6 @@
                 
 
 
-
-
-
-
-
-
-
-
-        
 
 
 

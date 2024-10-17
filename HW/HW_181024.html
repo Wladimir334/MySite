@@ -73,11 +73,65 @@
 
 
 
-              const palindrome = (str) => word = str.split('').reverse().join('');
-                  return str === word;
+              // const palindrome = (str) => word = str.split('').reverse().join('');
+              //     return str === word;
               
-                console.log(palindrome("казак")); 
-                console.log(palindrome("мороз")); 
+              //   console.log(palindrome("казак")); 
+              //   console.log(palindrome("мороз")); 
+
+
+
+
+                function countWords (str1) {
+                const arr = str1.split(" ");
+                return arr.filter(word => word != " ").length;
+                }
+
+                console.log(countWords('Big house is building.'));
+
+
+
+
+                function long (a, b) {
+                  return (b.length > a.length) ? b : a;
+                    }
+
+                function longestWord(str) {
+                  let words = str.split(' ');
+                    return words.reduce(long);
+                    }
+
+                console.log(longestWord("Jump for swimming."));
+
+
+
+                function averageWordLength(sentence) {
+                  let words = sentence.split(' ');
+                   let totalLength = 0;
+
+                words.forEach(word => {
+                 totalLength += word.length;
+                });
+                    return totalLength / words.length;
+                };
+
+                console.log(averageWordLength("There is the best pizza in Italy")); 
+
+
+
+
+                
+
+
+
+
+                
+
+
+
+
+
+
 
 
 

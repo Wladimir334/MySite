@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>221024_События_2</title>
+    
+  </head>
+  <body>
+
+  </body>
+
+  <script>
+    // try {        // код с ошибкой.   блок кода с потенциальной ошибкой заворачиваем в try
+    //     ...
+    //     ...
+    //     ...
+    // }       
+    
+    // catch (error) {   // код обрабатывающий ошибку
+    //     ...
+    //     ...
+    // }
+    // finally  {      // код какой будет выполнен в любом случае
+    //     ...
+    //     ...
+    // }
+
+    // try..catch
+    // try..finally
+    // try..catch..finally
+
+        //  function callSameFunc(){
+        //     console.log("Функция callSameFunc")
+        //  }
+
+        // try {
+        //     callSameFunc();
+        //     console.log("Конец блока try")
+        //     // ....далее не выполнится
+        // }
+        // catch(error)
+        //  {
+        //     console.log('Возникла ошибка')
+        //     console.log(error)
+        // }
+        // finally {
+        //     console.log('Блок finally')
+        // }
+
+        // console.log('Остальной код')
+
+
+        function checkAge(age){
+            if (age>18) {
+                console.log("Access approved")
+            } else {
+                     throw new Error("Access denied!")
+                    // throw "Access denied!"
+                }
+            }    
+        
+        checkAge(22)
+        checkAge(17)
+
+
+        try {
+            checkAge(17);
+        }
+        catch(error) {
+            console.error("Ошибка", error)
+        }
+
+  </script>
+
+</html>

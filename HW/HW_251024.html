@@ -10,18 +10,30 @@
     <input type="text", name="inputText2" id="text2">
 
     <button onclick="showText()", id="btn1">Жми!</button>
-
+    
     
   </body>
 
   <script>
     function showText(){
-      const num1 = document.getElementById(text1).value;
-      const num2 = document.getElementById(text2).value;
-      let summ = num1 + num2;
-        
+      const num1 = Number(document.getElementById('text1').value);
+      const num2 = Number(document.getElementById('text2').value);
+      const summ = num1 + num2;
+      if (summ) {alert ("Сумма = " + summ);
+        }   else { alert ("Нет такого результата ");
+
     }
-    alert ("Сумма = " + summ); 
+    };
+
+    console.log(typeof null)
+
+    var obj = {};
+
+
+
+
+    
+     
 
 
 

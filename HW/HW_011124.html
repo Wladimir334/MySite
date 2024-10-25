@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HW_011124</title>
+    
+  </head>
+  <body>
+
+
+  </body>
+  <script>
+    // function hello(){
+    //     alert ("Привет!")
+   // }
+
+    // function showErrors(word){
+    //     const num = /[0-9]/g;
+    //     const found = word.match(num);
+
+    //     if ( word.length < 4) {
+    //        alert ('Всё норм!') }
+    //        else if ( word.length > 4) {
+    //          alert ("Слово длиннее 4 символов!")
+    //        } else if ( found > 0)  { 
+    //         alert ("В слове есть цифры!") 
+    //     };
+           
+
+    //     };
+        
+
+    
+    // // hello();
+    // showErrors('При');
+    // showErrors('Привет');
+    // showErrors('П55');
+
+
+//     function showErrors(word) {
+//     // Преобразуем слово в строку для проверки длины и цифр.
+//     const wordStr = String(word);
+
+//     if (wordStr.length < 4) {
+//         alert('Всё норм!');
+//     } else if (wordStr.length > 4) {
+//         alert('Слово длиннее 4 символов!');
+//     } else if (/\d/.test(wordStr)) { // Проверка на наличие цифр
+//         alert('В слове есть цифры!');
+//     } else {
+//         alert('Слово ровно 4 символа и не содержит цифр.');
+//     }
+// }
+
+// // Тестирование функции с различными входными данными
+// showErrors('При');     // Меньше 4 символов
+// showErrors('Привет');  // Больше 4 символов
+// showErrors('П55');        // Число, будет преобразовано в строку
+
+function displayString(input) {
+    // Преобразуем входное значение в строку (на всякий случай)
+    const str = String(input);
+
+    // Проверка на количество символов
+    if (str.length < 4) {
+        throw new Error("Ошибка: Строка должна содержать не менее 4 символов.");
+    }
+
+    // Проверка на наличие цифр
+    if (/\d/.test(str)) {
+        throw new Error("Ошибка: Строка не должна содержать цифры.");
+    }
+
+    // Если проверка пройдена, выводим строку
+    console.log(str);
+}
+
+// Примеры использования функции
+try {
+    displayString("Привет"); // Отобразит "Привет"
+    displayString("Пр"); // Выдаст ошибку
+} catch (e) {
+    console.error(e.message); // Обработка ошибок
+}
+
+try {
+    displayString("Привет55"); // Выдаст ошибку
+} catch (e) {
+    console.error(e.message); // Обработка ошибок
+}
+
+  </script>
+</html>

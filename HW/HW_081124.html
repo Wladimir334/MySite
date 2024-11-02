@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HW_081124</title>
+      
+  </head>
+  <body>
+    
+    <p>Пароль:</p>
+    <input type="password" id="password" placeholder="Введеите пароль">
+      <br>
+    <p>Повторите пароль:</p>
+    <input type="password" id="repeatPassword" placeholder="Повторите пароль">
+  
+    
+  </body>
+  <script>
+    
+        const firstPassword = document.getElementById('password');
+        const secondPassword = document.getElementById('repeatPassword');
+
+        secondPassword.addEventListener("input", function() {
+        if (secondPassword.value === firstPassword.value) {
+          secondPassword.style.backgroundColor = "green";
+        } else {
+          secondPassword.style.backgroundColor = "red";
+        }});
+            
+  </script>
+</html>
